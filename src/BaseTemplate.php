@@ -34,7 +34,7 @@ class BaseTemplate
                 <!-- Логотип и Заголовок "Магазин 231" -->
                 <a class="navbar-brand d-flex align-items-center" href="/">
                     <img src="assets/images/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
-                    Магазин 231
+                    Бытовая Техника
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

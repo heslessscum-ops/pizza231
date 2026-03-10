@@ -11,7 +11,7 @@ class HomeController
     {
         $content = "
             <div class='jumbotron'>
-                <h1 class='display-4'>Добро пожаловать в Магазин 231!</h1>
+                <h1 class='display-4'>Добро пожаловать в Лучший Магазин Бытовой Техники!</h1>
                 <p class='lead'>Я коммандер Шепард и это мой любимый магазин бытовой техники на Цитадели.</p>
                 <a class='btn btn-primary btn-lg' href='/catalogue' role='button'>Перейти в каталог</a>
             </div>
