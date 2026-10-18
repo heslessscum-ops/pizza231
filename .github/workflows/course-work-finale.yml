@@ -2,9 +2,11 @@ name: PHP Laravel CI/CD Pipeline
 
 on:
   push:
-    branches: [ "course-work-finale"]
+    branches:
+      - course-work-finale
   pull_request:
-    branches: [ "course-work-finale"]
+    branches: 
+      - course-work-finale
 
 jobs:
   build-and-test:
