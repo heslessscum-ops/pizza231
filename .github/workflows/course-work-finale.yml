@@ -1,0 +1,36 @@
+name: PHP Laravel CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "course-work-finale"]
+  pull_request:
+    branches: [ "course-work-finale"]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Скачивание кода из репозитория
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Настройка окружения PHP 8.2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, dom, fileinfo, json
+          coverage: none
+
+      # 3. Установка зависимостей через Composer
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      # 4. Подготовка окружения для тестов (копирование .env)
+      - name: Copy .env file
+        run: cp .env.example .env
+
+      # 5. Запуск модульных тестов PHPUnit
+      - name: Run PHPUnit tests
+        run: vendor/bin/phpunit --configuration phpunit.xml
